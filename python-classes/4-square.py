@@ -49,4 +49,3 @@ class Square:
         Returns area of the square instance
         """
         return (self.size ** 2)
-    
