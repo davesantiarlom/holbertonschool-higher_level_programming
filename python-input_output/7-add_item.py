@@ -10,9 +10,13 @@ import os.path
 
 args = sys.argv[1:]
 
-"""
-Add arguments to a list, then save those arguments to a file
-"""
+    """
+    Creates a json representation of an object
+    Arguments:
+        obj (obj): The object inputted to create a class
+    Return:
+        A jason representation
+    """
 
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
@@ -20,9 +24,5 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 new = []
 if os.path.exists("./add_item.json"):
     new = load_from_json_file("add_item.json")
-
-    """
-    Add arguments to a list, then save those arguments to a file
-    """
     
 save_to_json_file(new + args, "add_item.json")
