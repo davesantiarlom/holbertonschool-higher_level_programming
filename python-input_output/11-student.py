@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Tru Jun 3 15:13:37 2020
-@author: David Santiago Arias
+Created on Tru Oct 3 15:13:37 2022
+@author: David Arias
 """
 
 
@@ -25,6 +25,8 @@ class Student:
     def to_json(self, attrs=None):
         """
         Represents of Student into json format
+        Attributes:
+            attrs (dict): A python object to convert
         Return:
             Student class as a json format
         """
@@ -32,3 +34,14 @@ class Student:
             return self.__dict__
         return {key: value for key, value in self.__dict__.items()
                 if key in attrs}
+
+    def reload_from_json(self, json):
+        """
+        Represents of Student into json format
+        Attributes:
+            attrs (dict): A python object to convert
+        Return:
+            Student class as a json format
+        """
+        for key, value in json.items():
+            setattr(self, key, value)
