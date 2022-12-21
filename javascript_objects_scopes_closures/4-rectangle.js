@@ -19,14 +19,14 @@ Rectangle.prototype.print = function () {
 };
 
 Rectangle.prototype.double = function () {
-  this.height *= 2;
   this.width *= 2;
+  this.height *= 2;
 };
 
 Rectangle.prototype.rotate = function () {
   const temp = this.height;
-  this.height = this.width;
   this.width = temp;
+  this.height = this.width;
 };
 
 module.exports = Rectangle;
