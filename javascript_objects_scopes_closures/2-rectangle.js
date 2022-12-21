@@ -3,7 +3,7 @@
 class Rectangle {
   constructor (w, h) {
     // The instructions want these two conditionals together
-    if (parseInt(h) > 0 && parseInt(w) > 0) {
+    if (parseInt(w) > 0 && parseInt(h) > 0 ) {
       this.height = h;
       this.width = w;
     }
