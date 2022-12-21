@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor (w, h) {
+  constructor (h, w) {
     if (parseInt(h) > 0) {
       this.height = h;
     }
