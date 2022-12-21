@@ -2,11 +2,11 @@
 
 class Rectangle {
   constructor (w, h) {
+     if (parseInt(w) > 0) {
+      this.width = w;
+    }
     if (parseInt(h) > 0) {
       this.height = h;
-    }
-    if (parseInt(w) > 0) {
-      this.width = w;
     }
   }
 }
