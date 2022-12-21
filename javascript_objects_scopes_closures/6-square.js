@@ -1,20 +1,17 @@
 #!/usr/bin/node
-
-const Rectangle = require('./5-square');
-
-class Square extends Rectangle {
-  // Does nothing
-}
-
-Square.prototype.charPrint = function (c) {
-  if (c === null) {
-    c = 'X';
-  }
-
-  let i = 0;
-  for (i; i < this.width; i++) {
-    console.log(c.repeat(this.width));
+const SquareA = require('./5-rectangle.js');
+module.exports = class Square extends SquareA {
+  charPrint (c) {
+    if (c === undefined) {
+      return this.print();
+    } else {
+      let A = '';
+      for (let i = 0; i < this.width; i++) {
+        A += c;
+      }
+      for (let i = 0; i < this.height; i++) {
+        console.log(A);
+      }
+    }
   }
 };
-
-module.exports = Square;
